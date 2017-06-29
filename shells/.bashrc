@@ -115,7 +115,7 @@ fi
 
 
 #BEGIN JEYAN MODS
-export PATH=$HOME/miniconda/bin:$PATH:$HOME/bin:$PATH/.local/bin
+export PATH=$HOME/miniconda/bin:$HOME/bin:$HOME/.local/bin:$PATH
 #if you want python2.7 use the below instead
 #export PATH=$HOME/miniconda2.7/bin:$PATH:$HOME/bin:$PATH/.local/bin
 alias emacs='emacs -nw'

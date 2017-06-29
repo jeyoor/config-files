@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/joorjitham/.zipline/data/quantopian-quandl/2016-12-04T16;26;49.760606/daily_equities.bcolz'
