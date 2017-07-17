@@ -121,3 +121,6 @@ export PATH=$HOME/miniconda/bin:$HOME/bin:$HOME/.local/bin:$PATH
 alias emacs='emacs -nw'
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
+if [[ ! $(pidof redshift) ]]; then
+   redshift & disown
+fi
