@@ -116,11 +116,14 @@ fi
 
 #BEGIN JEYAN MODS
 export PATH=$HOME/miniconda/bin:$HOME/bin:$HOME/.local/bin:$PATH
+
+#CNH-related
+export M2_HOME=$HOME/praj/maven/apache-maven-3.5.0
+export ANDROID_HOME=$HOME/Android/Sdk
+export NDK_HOME=$HOME/Android/Sdk/ndk-bundle
+export PATH=$HOME/praj/maven/apache-maven-3.5.0/bin:$PATH:$NDK_HOME:$ANDROID_HOME/platform-tools
+
 #if you want python2.7 use the below instead
 #export PATH=$HOME/miniconda2.7/bin:$PATH:$HOME/bin:$PATH/.local/bin
 alias emacs='emacs -nw'
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
-if [[ ! $(pidof redshift) ]]; then
-   redshift & disown
-fi
