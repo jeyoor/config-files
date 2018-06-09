@@ -1,0 +1,22 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+menuentry 'Ubuntu text - latest kernel symlink' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-bcf42128-d0c0-426b-bfbf-1bc1989e6d4a' {
+	recordfail
+	load_video
+	gfxmode $linux_gfx_mode
+	insmod gzio
+	insmod part_msdos
+	insmod ext2
+	set root='hd0,msdos5'
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root --hint-bios=hd0,msdos5 --hint-efi=hd0,msdos5 --hint-baremetal=ahci0,msdos5  bcf42128-d0c0-426b-bfbf-1bc1989e6d4a
+	else
+	  search --no-floppy --fs-uuid --set=root bcf42128-d0c0-426b-bfbf-1bc1989e6d4a
+	fi
+	linux	/boot/vmlinuz root=UUID=bcf42128-d0c0-426b-bfbf-1bc1989e6d4a ro text  quiet splash $vt_handoff
+	initrd	/boot/initrd.img
+}

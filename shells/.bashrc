@@ -127,3 +127,6 @@ export PATH=$HOME/praj/maven/apache-maven-3.5.0/bin:$PATH:$NDK_HOME:$ANDROID_HOM
 #export PATH=$HOME/miniconda2.7/bin:$PATH:$HOME/bin:$PATH/.local/bin
 alias emacs='emacs -nw'
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+if [[ ! $(pidof redshift) ]]; then
+   redshift -l 41.826812:-86.225925 & disown;
+fi
